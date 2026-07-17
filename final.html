@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Final ❤︎</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="final-page">
+
+
+<div class="carta">
+
+
+<h1>
+PARABÉNS
+</h1>
+
+
+<p>
+Você encontrou todas as palavras...
+</p>
+
+
+
+<h2>
+❤︎ EU TE AMO ❤︎
+</h2>
+
+
+
+
+<div class="resultado">
+
+
+<p>
+Tempo final:
+<span id="tempoFinal">
+00:00
+</span>
+
+</p>
+
+
+
+<p>
+ Ranking salvo!
+</p>
+
+
+</div>
+
+
+
+
+<button onclick="voltar()">
+
+Jogar novamente
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<script>
+
+
+let tempo =
+localStorage.getItem("tempoFinal");
+
+
+if(tempo){
+
+
+let min =
+Math.floor(tempo / 60);
+
+
+let seg =
+tempo % 60;
+
+
+
+document.querySelector("#tempoFinal")
+.innerHTML =
+`${String(min).padStart(2,"0")}:${String(seg).padStart(2,"0")}`;
+
+
+}
+
+
+
+
+function voltar(){
+
+
+window.location.href="index.html";
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
